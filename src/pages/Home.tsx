@@ -68,11 +68,11 @@ export default function Home() {
           </div>
 
           {/* Couple Image Profile */}
-          <div className="w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-[#CC5500] shadow-2xl mb-6 relative bg-stone-200">
+          <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#CC5500] shadow-2xl mb-6 relative bg-stone-200 ring-4 ring-[#556B2F]/20">
             <img 
-              src="/DSC_1918-Edit.jpg" 
+              src="/couple-circle.jpg" 
               alt="Oyinkansiye & Kehinde" 
-              className="object-cover w-full h-full"
+              className="object-cover object-[center_22%] w-full h-full"
             />
           </div>
 
