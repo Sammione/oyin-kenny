@@ -74,7 +74,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-serif text-[#556B2F] mb-6 tracking-tight drop-shadow-sm px-2">Kehinde</h1>
           
           <p className="text-md md:text-xl text-stone-700 mb-8 italic bg-white/60 px-6 py-2 rounded-full backdrop-blur-sm max-w-2xl">
-            The families of Pastor & Pastor (Mrs) Adeleke Abon and Surveyor Oludiran Owolabi request the honour of your presence at our Traditional Wedding Ceremony.
+            "Together is a beautiful place to be. With joyful hearts and endless love, we invite you to celebrate our union as we begin our journey of a lifetime together."
           </p>
           
           <div className="flex justify-center gap-3 md:gap-6 text-stone-700 mb-10">
@@ -97,19 +97,9 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full justify-center px-4">
-            <Link to="/rsvp" className="w-full sm:w-auto text-center bg-[#556B2F] hover:bg-[#37461E] text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl transform hover:-translate-y-1">
+            <Link to="/rsvp" className="w-full sm:w-auto text-center bg-[#556B2F] hover:bg-[#37461E] text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl transform hover:-translate-y-1">
               RSVP Now
             </Link>
-            
-            <a 
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Oyinkansiye+and+Kehinde&dates=20261114T090000Z/20261114T170000Z&details=Join+us+to+celebrate+our+Traditional+Wedding!&location=Oba+Sir+Olateru+Olagbegi+II+Civic+Centre,+Fajuyi+Road,+Owo,+Ondo+State"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto flex items-center justify-center bg-white text-[#556B2F] border-2 border-[#556B2F] hover:bg-[#556B2F] hover:text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl"
-            >
-              <Calendar className="mr-2" size={20} />
-              Add to Calendar
-            </a>
           </div>
 
           <div className="mt-8">
@@ -149,18 +139,6 @@ export default function Home() {
                   <div className="text-xl font-medium text-stone-700 leading-none mb-1">SATURDAY</div>
                   <div className="text-lg text-[#CC5500] font-bold">10:00 AM</div>
                 </div>
-              </div>
-
-              <div className="mt-auto">
-                <a 
-                  href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Oyinkansiye+and+Kehinde&dates=20261114T090000Z/20261114T170000Z&details=Join+us+to+celebrate+our+Traditional+Wedding!&location=Oba+Sir+Olateru+Olagbegi+II+Civic+Centre,+Fajuyi+Road,+Owo,+Ondo+State"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-white text-[#556B2F] border border-[#556B2F]/30 hover:bg-[#556B2F] hover:text-white px-6 py-2 rounded-full text-sm font-bold transition-all shadow-sm"
-                >
-                  <Calendar className="mr-2" size={16} />
-                  Add to Calendar
-                </a>
               </div>
             </div>
 
