@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Guest {
+  id          String    @id @default(uuid())
+  name        String
+  phone       String    @unique
+  attending   Boolean   @default(false)
+  qrToken     String    @unique @default(uuid())
+  checkedIn   Boolean   @default(false)
+  checkInTime DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model AdminUser {
+  id       String @id @default(uuid())
+  username String @unique
+  password String // Hashed
+}
