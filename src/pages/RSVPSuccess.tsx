@@ -28,7 +28,7 @@ export default function RSVPSuccess() {
       })
       
       pdf.addImage(imgData, 'JPEG', 0, 0, canvas.width, canvas.height)
-      pdf.save('Oyinkansola_Kehinde_Wedding_Invitation.pdf')
+      pdf.save('Oyinkansiye_Kehinde_Wedding_Invitation.pdf')
     } catch (error) {
       console.error('Failed to generate PDF', error)
       alert('Failed to download the invitation. Please try again.')
@@ -89,7 +89,7 @@ export default function RSVPSuccess() {
 
               <p className="text-lg text-stone-700 mb-6 italic px-8">request the honour of your presence at the<br/>Traditional Wedding Ceremony of their beloved children</p>
               
-              <h1 className="text-6xl font-serif text-[#556B2F] mb-4">Oyinkansola Favour</h1>
+              <h1 className="text-6xl font-serif text-[#556B2F] mb-4">Oyinkansiye Favour</h1>
               <h2 className="text-4xl font-serif text-[#CC5500] mb-4">&amp;</h2>
               <h1 className="text-6xl font-serif text-[#556B2F] mb-8">Kehinde Joseph</h1>
               

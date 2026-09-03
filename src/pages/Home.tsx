@@ -69,7 +69,7 @@ export default function Home() {
           <span className="uppercase tracking-widest text-sm text-[#CC5500] font-bold mb-4 block bg-white/80 px-6 py-2 rounded-full shadow-sm">
             We are getting married
           </span>
-          <h1 className="text-5xl md:text-7xl font-serif text-[#556B2F] mb-4 tracking-tight drop-shadow-sm px-2">Oyinkansola</h1>
+          <h1 className="text-5xl md:text-7xl font-serif text-[#556B2F] mb-4 tracking-tight drop-shadow-sm px-2">Oyinkansiye</h1>
           <h2 className="text-4xl md:text-5xl font-serif text-[#CC5500] mb-4">&amp;</h2>
           <h1 className="text-5xl md:text-7xl font-serif text-[#556B2F] mb-6 tracking-tight drop-shadow-sm px-2">Kehinde</h1>
           
@@ -102,7 +102,7 @@ export default function Home() {
             </Link>
             
             <a 
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Oyinkansola+and+Kehinde&dates=20261114T090000Z/20261114T170000Z&details=Join+us+to+celebrate+our+Traditional+Wedding!&location=Oba+Sir+Olateru+Olagbegi+II+Civic+Centre,+Fajuyi+Road,+Owo,+Ondo+State"
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Oyinkansiye+and+Kehinde&dates=20261114T090000Z/20261114T170000Z&details=Join+us+to+celebrate+our+Traditional+Wedding!&location=Oba+Sir+Olateru+Olagbegi+II+Civic+Centre,+Fajuyi+Road,+Owo,+Ondo+State"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto flex items-center justify-center bg-white text-[#556B2F] border-2 border-[#556B2F] hover:bg-[#556B2F] hover:text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl"
@@ -153,7 +153,7 @@ export default function Home() {
 
               <div className="mt-auto">
                 <a 
-                  href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Oyinkansola+and+Kehinde&dates=20261114T090000Z/20261114T170000Z&details=Join+us+to+celebrate+our+Traditional+Wedding!&location=Oba+Sir+Olateru+Olagbegi+II+Civic+Centre,+Fajuyi+Road,+Owo,+Ondo+State"
+                  href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Oyinkansiye+and+Kehinde&dates=20261114T090000Z/20261114T170000Z&details=Join+us+to+celebrate+our+Traditional+Wedding!&location=Oba+Sir+Olateru+Olagbegi+II+Civic+Centre,+Fajuyi+Road,+Owo,+Ondo+State"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white text-[#556B2F] border border-[#556B2F]/30 hover:bg-[#556B2F] hover:text-white px-6 py-2 rounded-full text-sm font-bold transition-all shadow-sm"
@@ -255,7 +255,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#37461E] text-white py-16 text-center">
-        <h3 className="text-4xl font-serif mb-6 text-[#CC5500]">Oyinkansola & Kehinde</h3>
+        <h3 className="text-4xl font-serif mb-6 text-[#CC5500]">Oyinkansiye & Kehinde</h3>
         <p className="text-stone-300 opacity-90 text-lg mb-8">We can't wait to celebrate with you!</p>
         <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-8 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors">
           Confirm Your Attendance
