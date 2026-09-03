@@ -1,5 +1,3 @@
-'use client'
-
 import { Download } from 'lucide-react'
 
 export default function ExportCsvButton({ guests }: { guests: any[] }) {
@@ -10,8 +8,7 @@ export default function ExportCsvButton({ guests }: { guests: any[] }) {
       const attending = guest.attending ? 'Yes' : 'No'
       const checkedIn = guest.checkedIn ? 'Yes' : 'No'
       const date = new Date(guest.createdAt).toLocaleDateString()
-      // Escape commas in names just in case
-      const name = `"${guest.name.replace(/"/g, '""')}"`
+      const name = `"${(guest.name || '').replace(/"/g, '""')}"`
       return `${name},${guest.phone},${attending},${checkedIn},${date}`
     })
     
@@ -30,7 +27,7 @@ export default function ExportCsvButton({ guests }: { guests: any[] }) {
   return (
     <button 
       onClick={downloadCSV}
-      className="inline-flex items-center text-sm bg-stone-100 hover:bg-stone-200 text-stone-700 px-4 py-2 rounded-lg transition-colors border border-stone-200 font-medium"
+      className="inline-flex items-center text-sm bg-stone-100 hover:bg-stone-200 text-stone-700 px-4 py-2 rounded-lg transition-colors border border-stone-200 font-medium cursor-pointer"
     >
       <Download size={16} className="mr-2" />
       Export as CSV

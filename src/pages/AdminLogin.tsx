@@ -1,11 +1,9 @@
-'use client'
-
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useNavigate } from 'react-router-dom'
 import { Lock, Loader2 } from 'lucide-react'
 
 export default function AdminLogin() {
-  const router = useRouter()
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -17,12 +15,9 @@ export default function AdminLogin() {
     const formData = new FormData(e.currentTarget)
     const password = formData.get('password') as string
 
-    // Super simple auth for MVP: 
-    // In a real app we'd use NextAuth or verify against DB + set httpOnly cookie.
-    // Here we'll do a basic check and set a client cookie for simplicity.
-    if (password === 'admin123') { // Replace with env var in prod
-      document.cookie = "admin_auth=true; path=/; max-age=86400"
-      router.push('/admin/dashboard')
+    if (password === 'admin123') {
+      localStorage.setItem('admin_auth', 'true')
+      navigate('/admin/dashboard')
     } else {
       setError('Invalid password')
       setLoading(false)
@@ -60,7 +55,7 @@ export default function AdminLogin() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#556B2F] hover:bg-[#37461E] text-white py-4 rounded-xl font-bold transition-colors flex items-center justify-center shadow-md disabled:opacity-70"
+            className="w-full bg-[#556B2F] hover:bg-[#37461E] text-white py-4 rounded-xl font-bold transition-colors flex items-center justify-center shadow-md disabled:opacity-70 cursor-pointer"
           >
             {loading ? <Loader2 className="animate-spin" /> : 'Login'}
           </button>

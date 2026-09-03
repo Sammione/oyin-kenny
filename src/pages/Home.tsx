@@ -1,8 +1,5 @@
-'use client'
-
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import { Link } from 'react-router-dom'
 import { Calendar, MapPin, Clock, Heart } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -46,12 +43,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-stone-100 -z-20"></div>
         {/* Background Image using the couple's picture */}
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/DSC_2053-Edit.jpg" 
+          <img 
+            src="/DSC_2053-Edit.jpg" 
             alt="Couple Background" 
-            fill 
-            className="object-cover opacity-30 object-top"
-            priority
+            className="w-full h-full object-cover opacity-30 object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-50/80 via-transparent to-stone-50"></div>
         </div>
@@ -63,11 +58,10 @@ export default function Home() {
           className="max-w-4xl mx-auto z-10 px-4 mt-8 flex flex-col items-center"
         >
           {/* Couple Image Profile */}
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#CC5500] shadow-2xl mb-8 relative">
-            <Image 
-              src="/images/DSC_1918-Edit.jpg" 
+          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#CC5500] shadow-2xl mb-8 relative bg-stone-200">
+            <img 
+              src="/DSC_1918-Edit.jpg" 
               alt="The Couple" 
-              fill
               className="object-cover w-full h-full"
             />
           </div>
@@ -103,7 +97,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full justify-center px-4">
-            <Link href="/rsvp" className="w-full sm:w-auto text-center bg-[#556B2F] hover:bg-[#37461E] text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl transform hover:-translate-y-1">
+            <Link to="/rsvp" className="w-full sm:w-auto text-center bg-[#556B2F] hover:bg-[#37461E] text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl transform hover:-translate-y-1">
               RSVP Now
             </Link>
             
@@ -196,15 +190,15 @@ export default function Home() {
       {/* Images Section */}
       <section className="py-12 bg-stone-100 overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-             <Image src="/images/DSC_2055-Edit.jpg" alt="Couple 1" fill className="object-cover" />
+          <div className="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-stone-200">
+             <img src="/DSC_2055-Edit.jpg" alt="Couple 1" className="object-cover w-full h-full" />
           </div>
           <div className="grid grid-rows-2 gap-4 h-96 md:h-[500px]">
-             <div className="relative rounded-3xl overflow-hidden shadow-xl">
-               <Image src="/images/WhatsApp Image 2026-09-02 at 20.52.44.jpeg" alt="Event 1" fill className="object-cover object-center" />
+             <div className="relative rounded-3xl overflow-hidden shadow-xl bg-stone-200">
+               <img src="/WhatsApp Image 2026-09-02 at 20.52.44.jpeg" alt="Event 1" className="object-cover object-center w-full h-full" />
              </div>
-             <div className="relative rounded-3xl overflow-hidden shadow-xl">
-               <Image src="/images/WhatsApp Image 2026-09-02 at 20.52.52.jpeg" alt="Event 2" fill className="object-cover object-top" />
+             <div className="relative rounded-3xl overflow-hidden shadow-xl bg-stone-200">
+               <img src="/WhatsApp Image 2026-09-02 at 20.52.52.jpeg" alt="Event 2" className="object-cover object-top w-full h-full" />
              </div>
           </div>
         </div>
@@ -263,7 +257,7 @@ export default function Home() {
       <footer className="bg-[#37461E] text-white py-16 text-center">
         <h3 className="text-4xl font-serif mb-6 text-[#CC5500]">Oyinkansola & Kehinde</h3>
         <p className="text-stone-300 opacity-90 text-lg mb-8">We can't wait to celebrate with you!</p>
-        <Link href="/rsvp" className="inline-block bg-white text-[#37461E] px-8 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors">
+        <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-8 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors">
           Confirm Your Attendance
         </Link>
       </footer>

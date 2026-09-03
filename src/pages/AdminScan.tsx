@@ -1,28 +1,23 @@
-'use client'
-
 import { useState, useEffect, useRef } from 'react'
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { ArrowLeft, CheckCircle2, XCircle, AlertCircle, RefreshCcw, Loader2 } from 'lucide-react'
-import { verifyQrToken } from '@/app/actions'
+import { verifyQrToken } from '../lib/actions'
 import { Html5QrcodeScanner } from 'html5-qrcode'
 
 type ScanResult = {
   status: 'VALID' | 'INVALID' | 'ALREADY_CHECKED_IN'
   guest?: string
   message: string
-  checkInTime?: Date | null
+  checkInTime?: string | Date | null
 } | null
 
-export default function QRScanner() {
-  const router = useRouter()
+export default function AdminScan() {
   const [scanResult, setScanResult] = useState<ScanResult>(null)
   const [loading, setLoading] = useState(false)
   const scannerRef = useRef<Html5QrcodeScanner | null>(null)
   const scannerRegionId = 'qr-reader'
 
   useEffect(() => {
-    // Only initialize if we haven't already
     if (!scannerRef.current) {
       const scanner = new Html5QrcodeScanner(
         scannerRegionId,
@@ -44,9 +39,8 @@ export default function QRScanner() {
   }, [])
 
   const handleScanSuccess = async (decodedText: string) => {
-    if (loading) return // Prevent multiple rapid scans
+    if (loading) return
     
-    // Pause scanner
     if (scannerRef.current) {
       scannerRef.current.pause()
     }
@@ -67,8 +61,8 @@ export default function QRScanner() {
     }
   }
 
-  const handleScanError = (error: any) => {
-    // Ignore frequent scan errors (expected when looking for a QR)
+  const handleScanError = () => {
+    // Expected while looking for codes
   }
 
   const handleReset = () => {
@@ -81,23 +75,22 @@ export default function QRScanner() {
   return (
     <div className="min-h-screen bg-stone-900 text-white flex flex-col">
       <header className="p-4 flex items-center justify-between bg-stone-950 border-b border-stone-800">
-        <Link href="/admin/dashboard" className="text-stone-400 hover:text-white flex items-center">
+        <Link to="/admin/dashboard" className="text-stone-400 hover:text-white flex items-center">
           <ArrowLeft size={20} className="mr-2" />
           Dashboard
         </Link>
         <h1 className="font-semibold tracking-wide">Event Check-in</h1>
-        <div className="w-20"></div> {/* Spacer for centering */}
+        <div className="w-20"></div>
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-4">
-        
         {loading ? (
           <div className="flex flex-col items-center justify-center h-64">
-            <Loader2 size={48} className="animate-spin text-[--color-brand-orange] mb-4" />
+            <Loader2 size={48} className="animate-spin text-[#CC5500] mb-4" />
             <p className="text-stone-400">Verifying Pass...</p>
           </div>
         ) : scanResult ? (
-          <div className="w-full max-w-sm bg-white text-stone-900 rounded-2xl p-8 text-center shadow-2xl animate-in fade-in zoom-in duration-300">
+          <div className="w-full max-w-sm bg-white text-stone-900 rounded-2xl p-8 text-center shadow-2xl">
             {scanResult.status === 'VALID' && (
               <>
                 <div className="mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">
@@ -137,7 +130,7 @@ export default function QRScanner() {
 
             <button
               onClick={handleReset}
-              className="w-full bg-stone-900 text-white py-4 rounded-xl font-bold flex items-center justify-center hover:bg-stone-800 transition-colors"
+              className="w-full bg-stone-900 text-white py-4 rounded-xl font-bold flex items-center justify-center hover:bg-stone-800 transition-colors cursor-pointer"
             >
               <RefreshCcw size={18} className="mr-2" />
               Scan Next Guest
@@ -153,7 +146,6 @@ export default function QRScanner() {
             </p>
           </div>
         )}
-
       </main>
     </div>
   )
