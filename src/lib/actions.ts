@@ -14,7 +14,7 @@ export async function registerGuest(name: string, phone: string, attending: bool
 
     if (fetchError) {
       console.error('Error fetching guest:', fetchError)
-      return { error: 'Failed to verify existing guest.' }
+      return { error: fetchError.message || 'Failed to verify existing guest.' }
     }
 
     if (existingGuest) {
@@ -25,7 +25,10 @@ export async function registerGuest(name: string, phone: string, attending: bool
         .select()
         .single()
 
-      if (updateError) throw updateError
+      if (updateError) {
+        console.error('Update guest error:', updateError)
+        return { error: updateError.message || 'Failed to update attendance.' }
+      }
       return { success: true, guest: updatedGuest }
     }
 
@@ -41,11 +44,14 @@ export async function registerGuest(name: string, phone: string, attending: bool
       .select()
       .single()
 
-    if (createError) throw createError
+    if (createError) {
+      console.error('Create guest error:', createError)
+      return { error: createError.message || 'Failed to register. Please try again.' }
+    }
     return { success: true, guest }
-  } catch (error) {
+  } catch (error: any) {
     console.error('Registration error:', error)
-    return { error: 'Failed to register. Please try again.' }
+    return { error: error?.message || 'Failed to register. Please try again.' }
   }
 }
 
