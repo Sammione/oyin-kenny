@@ -235,9 +235,17 @@ export default function Home() {
       <footer className="bg-[#37461E] text-white py-16 text-center">
         <h3 className="text-4xl font-serif mb-6 text-[#CC5500]">Oyinkansiye & Kehinde</h3>
         <p className="text-stone-300 opacity-90 text-lg mb-8">We can't wait to celebrate with you!</p>
-        <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-8 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors">
-          Confirm Your Attendance
-        </Link>
+        <div className="mb-4">
+          <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-8 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors shadow-md">
+            Confirm Your Attendance
+          </Link>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-white/10 text-xs text-stone-400">
+          <Link to="/admin/login" className="hover:text-stone-200 transition-colors">
+            Organizer / Admin Portal
+          </Link>
+        </div>
       </footer>
     </div>
   )
