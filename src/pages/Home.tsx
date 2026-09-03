@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, MapPin, Clock, Heart } from 'lucide-react'
+import { MapPin, Clock, Heart } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -46,59 +46,110 @@ export default function Home() {
           <img 
             src="/DSC_2053-Edit.jpg" 
             alt="Couple Background" 
-            className="w-full h-full object-cover opacity-30 object-top"
+            className="w-full h-full object-cover opacity-25 object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/80 via-transparent to-stone-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/85 via-stone-50/60 to-stone-50"></div>
         </div>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="max-w-4xl mx-auto z-10 px-4 mt-8 flex flex-col items-center"
+          className="max-w-4xl mx-auto z-10 px-4 mt-6 flex flex-col items-center"
         >
+          {/* Yoruba Traditional Welcome */}
+          <div className="mb-6 flex flex-col items-center">
+            <span className="uppercase tracking-widest text-xs md:text-sm text-[#CC5500] font-bold bg-white/90 px-6 py-2 rounded-full shadow-sm border border-[#CC5500]/20">
+              Ẹ Káàbọ̀ sí Ibi Ìgbéyàwó
+            </span>
+            <span className="text-base md:text-lg font-serif italic text-[#556B2F] mt-2 font-medium tracking-wide">
+              "Oyin ti wọ inú ìfẹ́ yìí."
+            </span>
+          </div>
+
           {/* Couple Image Profile */}
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#CC5500] shadow-2xl mb-8 relative bg-stone-200">
+          <div className="w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-[#CC5500] shadow-2xl mb-6 relative bg-stone-200">
             <img 
               src="/DSC_1918-Edit.jpg" 
-              alt="The Couple" 
+              alt="Oyinkansiye & Kehinde" 
               className="object-cover w-full h-full"
             />
           </div>
 
-          <span className="uppercase tracking-widest text-sm text-[#CC5500] font-bold mb-4 block bg-white/80 px-6 py-2 rounded-full shadow-sm">
-            We are getting married
-          </span>
-          <h1 className="text-5xl md:text-7xl font-serif text-[#556B2F] mb-4 tracking-tight drop-shadow-sm px-2">Oyinkansiye</h1>
-          <h2 className="text-4xl md:text-5xl font-serif text-[#CC5500] mb-4">&amp;</h2>
-          <h1 className="text-5xl md:text-7xl font-serif text-[#556B2F] mb-6 tracking-tight drop-shadow-sm px-2">Kehinde</h1>
+          {/* Couple Full Names */}
+          <h1 className="text-4xl md:text-6xl font-serif text-[#556B2F] mb-2 tracking-tight drop-shadow-sm px-2">
+            Oyinkansiye Favour
+          </h1>
+          <h2 className="text-3xl md:text-4xl font-serif text-[#CC5500] mb-2">&amp;</h2>
+          <h1 className="text-4xl md:text-6xl font-serif text-[#556B2F] mb-6 tracking-tight drop-shadow-sm px-2">
+            Kehinde Joseph
+          </h1>
           
-          <p className="text-md md:text-xl text-stone-700 mb-8 italic bg-white/60 px-6 py-2 rounded-full backdrop-blur-sm max-w-2xl">
-            "Together is a beautiful place to be. With joyful hearts and endless love, we invite you to celebrate our union as we begin our journey of a lifetime together."
-          </p>
-          
-          <div className="flex justify-center gap-3 md:gap-6 text-stone-700 mb-10">
-            <div className="flex flex-col items-center p-3 md:p-5 bg-white/80 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg border border-[#556B2F]/20">
+          {/* Minimal Love Story */}
+          <div className="bg-white/80 backdrop-blur-md border border-stone-200/70 rounded-2xl px-6 py-4 mb-6 max-w-lg shadow-sm">
+            <p className="text-lg md:text-xl font-serif text-[#CC5500] font-bold mb-1">
+              A little sweetness. A lifetime of love.
+            </p>
+            <p className="text-sm md:text-base text-stone-600 font-medium">
+              Two hearts. One home. One beautiful beginning.
+            </p>
+          </div>
+
+          {/* Date, Time & Venue Highlight */}
+          <div className="bg-white/85 backdrop-blur-md rounded-2xl p-5 mb-6 border border-[#556B2F]/20 shadow-sm max-w-md w-full">
+            <div className="text-[#556B2F] font-bold text-base md:text-lg mb-1">
+              Saturday · 14 November 2026 · 10:00 AM
+            </div>
+            <div className="text-stone-700 font-medium text-sm md:text-base leading-snug">
+              Oba Sir Olateru Olagbegi II, K.B.E. Civic Centre
+            </div>
+            <div className="text-stone-500 text-xs md:text-sm mt-1">
+              Fajuyi Road, Owo, Ondo State
+            </div>
+          </div>
+
+          {/* Colours of the Day */}
+          <div className="mb-8 flex flex-col items-center">
+            <span className="text-xs uppercase tracking-widest text-stone-500 font-semibold mb-2">
+              Colours of the Day
+            </span>
+            <div className="flex items-center gap-6 bg-white/90 backdrop-blur-md px-6 py-2.5 rounded-full border border-stone-200 shadow-sm">
+              <div className="flex items-center gap-2">
+                <span className="w-4 h-4 rounded-full bg-[#556B2F] shadow-sm inline-block border border-black/10"></span>
+                <span className="text-xs md:text-sm font-semibold text-[#556B2F]">Olive Green</span>
+              </div>
+              <span className="text-stone-300">·</span>
+              <div className="flex items-center gap-2">
+                <span className="w-4 h-4 rounded-full bg-[#CC5500] shadow-sm inline-block border border-black/10"></span>
+                <span className="text-xs md:text-sm font-semibold text-[#CC5500]">Burnt Orange</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Countdown Timer */}
+          <div className="flex justify-center gap-3 md:gap-6 text-stone-700 mb-8">
+            <div className="flex flex-col items-center p-3 md:p-5 bg-white/85 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-md border border-[#556B2F]/20">
               <span className="text-3xl font-bold text-[#556B2F]">{timeLeft.days}</span>
               <span className="text-xs uppercase tracking-wider font-semibold">Days</span>
             </div>
-            <div className="flex flex-col items-center p-3 md:p-5 bg-white/80 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg border border-[#556B2F]/20">
+            <div className="flex flex-col items-center p-3 md:p-5 bg-white/85 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-md border border-[#556B2F]/20">
               <span className="text-3xl font-bold text-[#556B2F]">{timeLeft.hours}</span>
               <span className="text-xs uppercase tracking-wider font-semibold">Hrs</span>
             </div>
-            <div className="flex flex-col items-center p-3 md:p-5 bg-white/80 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg border border-[#556B2F]/20">
+            <div className="flex flex-col items-center p-3 md:p-5 bg-white/85 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-md border border-[#556B2F]/20">
               <span className="text-3xl font-bold text-[#556B2F]">{timeLeft.minutes}</span>
               <span className="text-xs uppercase tracking-wider font-semibold">Mins</span>
             </div>
-            <div className="flex flex-col items-center p-3 md:p-5 bg-white/80 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-lg border border-[#CC5500]/20">
+            <div className="flex flex-col items-center p-3 md:p-5 bg-white/85 backdrop-blur-md rounded-2xl min-w-[70px] md:min-w-[90px] shadow-md border border-[#CC5500]/20">
               <span className="text-3xl font-bold text-[#CC5500]">{timeLeft.seconds}</span>
               <span className="text-xs uppercase tracking-wider font-semibold text-[#CC5500]">Secs</span>
             </div>
           </div>
 
+          {/* Call to Action Button */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full justify-center px-4">
             <Link to="/rsvp" className="w-full sm:w-auto text-center bg-[#556B2F] hover:bg-[#37461E] text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl transform hover:-translate-y-1">
-              RSVP Now
+              Let Us Know You're Coming
             </Link>
           </div>
 
@@ -124,10 +175,9 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#556B2F]/5 rounded-bl-full -z-10"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#556B2F]/5 rounded-tr-full -z-10"></div>
               
-              <Calendar className="mx-auto text-[#556B2F] mb-4" size={40} strokeWidth={1.5} />
               <h3 className="text-2xl font-bold text-[#556B2F] mb-6 tracking-widest uppercase text-sm">When</h3>
               
-              <div className="flex justify-center items-center mb-8">
+              <div className="flex justify-center items-center mb-4">
                 <div className="text-right pr-6 border-r-2 border-[#556B2F]/20">
                   <div className="text-3xl font-serif text-[#556B2F] leading-none mb-1">NOV</div>
                   <div className="text-lg text-stone-500 tracking-widest font-semibold">2026</div>
@@ -139,6 +189,13 @@ export default function Home() {
                   <div className="text-xl font-medium text-stone-700 leading-none mb-1">SATURDAY</div>
                   <div className="text-lg text-[#CC5500] font-bold">10:00 AM</div>
                 </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-[#556B2F]/15 flex items-center justify-center gap-3">
+                <span className="text-xs uppercase tracking-wider text-stone-500 font-semibold">Attire / Colours:</span>
+                <span className="text-xs md:text-sm font-bold text-[#556B2F]">Olive Green</span>
+                <span className="text-stone-300">&amp;</span>
+                <span className="text-xs md:text-sm font-bold text-[#CC5500]">Burnt Orange</span>
               </div>
             </div>
 
@@ -219,7 +276,7 @@ export default function Home() {
 
             <div className="flex gap-6 items-start">
               <div className="bg-[#CC5500]/10 p-4 rounded-2xl text-[#CC5500]">
-                <Calendar size={28} />
+                <Clock size={28} />
               </div>
               <div>
                 <h4 className="text-2xl font-bold text-[#556B2F]">Reception & Party</h4>
@@ -236,8 +293,8 @@ export default function Home() {
         <h3 className="text-4xl font-serif mb-6 text-[#CC5500]">Oyinkansiye & Kehinde</h3>
         <p className="text-stone-300 opacity-90 text-lg mb-8">We can't wait to celebrate with you!</p>
         <div className="mb-4">
-          <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-8 py-3 rounded-full font-bold hover:bg-stone-200 transition-colors shadow-md">
-            Confirm Your Attendance
+          <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-10 py-4 rounded-full font-bold hover:bg-stone-200 transition-colors shadow-md text-lg">
+            Let Us Know You're Coming
           </Link>
         </div>
 

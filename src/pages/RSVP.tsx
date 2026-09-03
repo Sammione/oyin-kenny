@@ -52,7 +52,7 @@ export default function RSVPPage() {
           className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-stone-100"
         >
           <div className="bg-[#556B2F] p-6 text-center text-white">
-            <h1 className="text-3xl font-serif mb-2">RSVP</h1>
+            <h1 className="text-2xl md:text-3xl font-serif mb-2">Will You Be Joining Us?</h1>
             <p className="text-white/80">Please let us know if you can make it</p>
           </div>
 
