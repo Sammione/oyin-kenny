@@ -98,7 +98,7 @@ export default function Home() {
           {/* Date, Time & Venue Highlight */}
           <div className="bg-white/85 backdrop-blur-md rounded-2xl p-5 mb-6 border border-[#556B2F]/20 shadow-sm max-w-md w-full">
             <div className="text-[#556B2F] font-bold text-base md:text-lg mb-1">
-              Saturday · 14th November 2026 · 10:00 AM
+              Saturday Nov 14, 2026 · 10:00 AM
             </div>
             <div className="text-stone-700 font-medium text-sm md:text-base leading-snug">
               Oba Sir Olateru Olagbegi II, K.B.E. Civic Centre
@@ -192,7 +192,7 @@ export default function Home() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-[#556B2F]/15 flex items-center justify-center gap-3">
-                <span className="text-xs uppercase tracking-wider text-stone-500 font-semibold">Attire / Colours:</span>
+                <span className="text-xs uppercase tracking-wider text-stone-500 font-semibold">Colours:</span>
                 <span className="text-xs md:text-sm font-bold text-[#556B2F]">Olive Green</span>
                 <span className="text-stone-300">&amp;</span>
                 <span className="text-xs md:text-sm font-bold text-[#CC5500]">Burnt Orange</span>
