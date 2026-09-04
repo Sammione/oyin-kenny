@@ -24,13 +24,23 @@ export default function AdminDashboard() {
   const loadStats = async () => {
     setLoading(true)
     setFetchError(null)
-    const res = await getDashboardStats()
-    if (res.error) {
-      setFetchError(res.error)
-    } else {
-      setData(res)
+    try {
+      const res = await getDashboardStats()
+      console.log('getDashboardStats result:', res)
+      if (res.error) {
+        setFetchError(res.error)
+      } else {
+        setData({
+          stats: res.stats,
+          guests: res.guests
+        })
+      }
+    } catch (err: any) {
+      console.error('loadStats threw:', err)
+      setFetchError(err?.message || 'Unexpected error loading dashboard.')
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   useEffect(() => {
