@@ -71,14 +71,14 @@ export default function Home() {
           <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#CC5500] shadow-2xl mb-6 relative bg-stone-200 ring-4 ring-[#556B2F]/20">
             <img 
               src="/couple-circle.jpg" 
-              alt="Oyinkansiye & Kehinde" 
+              alt="Oyinkansife & Kehinde" 
               className="object-cover object-[center_22%] w-full h-full"
             />
           </div>
 
           {/* Couple Full Names */}
           <h1 className="text-4xl md:text-6xl font-serif text-[#556B2F] mb-2 tracking-tight drop-shadow-sm px-2">
-            Oyinkansiye Favour
+            Oyinkansife Favour
           </h1>
           <h2 className="text-3xl md:text-4xl font-serif text-[#CC5500] mb-2">&amp;</h2>
           <h1 className="text-4xl md:text-6xl font-serif text-[#556B2F] mb-6 tracking-tight drop-shadow-sm px-2">
@@ -290,7 +290,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#37461E] text-white py-16 text-center">
-        <h3 className="text-4xl font-serif mb-6 text-[#CC5500]">Oyinkansiye & Kehinde</h3>
+        <h3 className="text-4xl font-serif mb-6 text-[#CC5500]">Oyinkansife & Kehinde</h3>
         <p className="text-stone-300 opacity-90 text-lg mb-8">We can't wait to celebrate with you!</p>
         <div className="mb-4">
           <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-10 py-4 rounded-full font-bold hover:bg-stone-200 transition-colors shadow-md text-lg">
