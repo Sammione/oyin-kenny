@@ -254,7 +254,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="text-2xl font-bold text-[#556B2F]">Arrival of Guests</h4>
-                <p className="text-[#CC5500] font-bold text-lg mt-1">10:00 AM</p>
+                <p className="text-[#CC5500] font-bold text-lg mt-1">9:00 AM</p>
                 <p className="text-stone-600 mt-2 text-lg">Please arrive early to find your seats.</p>
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="text-2xl font-bold text-[#556B2F]">Traditional Wedding</h4>
-                <p className="text-[#CC5500] font-bold text-lg mt-1">11:00 AM</p>
+                <p className="text-[#CC5500] font-bold text-lg mt-1">10:00 AM</p>
                 <p className="text-stone-600 mt-2 text-lg">Joining of the couple in holy matrimony.</p>
               </div>
             </div>

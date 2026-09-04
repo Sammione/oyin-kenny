@@ -7,7 +7,7 @@ import ExportCsvButton from '../components/ExportCsvButton'
 export default function AdminDashboard() {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
-  const [fetchError, setFetchError] = useState<string | null>(null)
+  const [fetchError, setFetchError] = useState<string | null>(null);
   const [data, setData] = useState<{
     stats: {
       totalRegistered: number

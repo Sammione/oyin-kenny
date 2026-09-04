@@ -73,7 +73,7 @@ export default function RSVPPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:ring-2 focus:ring-[#CC5500] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:ring-2 focus:ring-[#CC5500] focus:border-transparent outline-none transition-all text-[#CC5500]"
                   placeholder="e.g. Jane Doe"
                 />
               </div>
