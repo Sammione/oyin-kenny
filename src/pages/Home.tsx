@@ -98,7 +98,7 @@ export default function Home() {
           {/* Date, Time & Venue Highlight */}
           <div className="bg-white/85 backdrop-blur-md rounded-2xl p-5 mb-6 border border-[#556B2F]/20 shadow-sm max-w-md w-full">
             <div className="text-[#556B2F] font-bold text-base md:text-lg mb-1">
-              Saturday · 14 November 2026 · 10:00 AM
+              Saturday · 14th November 2026 · 10:00 AM
             </div>
             <div className="text-stone-700 font-medium text-sm md:text-base leading-snug">
               Oba Sir Olateru Olagbegi II, K.B.E. Civic Centre
@@ -149,7 +149,7 @@ export default function Home() {
           {/* Call to Action Button */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full justify-center px-4">
             <Link to="/rsvp" className="w-full sm:w-auto text-center bg-[#556B2F] hover:bg-[#37461E] text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl transform hover:-translate-y-1">
-              Let Us Know You're Coming
+              Confirm if you will be around
             </Link>
           </div>
 
@@ -183,7 +183,7 @@ export default function Home() {
                   <div className="text-lg text-stone-500 tracking-widest font-semibold">2026</div>
                 </div>
                 <div className="px-6">
-                  <div className="text-7xl font-serif text-[#556B2F] leading-none">14</div>
+                  <div className="text-7xl font-serif text-[#556B2F] leading-none">14th</div>
                 </div>
                 <div className="text-left pl-6 border-l-2 border-[#556B2F]/20">
                   <div className="text-xl font-medium text-stone-700 leading-none mb-1">SATURDAY</div>
@@ -268,7 +268,7 @@ export default function Home() {
               <div>
                 <h4 className="text-2xl font-bold text-[#556B2F]">Traditional Wedding</h4>
                 <p className="text-[#CC5500] font-bold text-lg mt-1">10:00 AM</p>
-                <p className="text-stone-600 mt-2 text-lg">Joining of the couple in holy matrimony.</p>
+                <p className="text-stone-600 mt-2 text-lg">Traditional joining of the couple and celebration of families.</p>
               </div>
             </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
         <p className="text-stone-300 opacity-90 text-lg mb-8">We can't wait to celebrate with you!</p>
         <div className="mb-4">
           <Link to="/rsvp" className="inline-block bg-white text-[#37461E] px-10 py-4 rounded-full font-bold hover:bg-stone-200 transition-colors shadow-md text-lg">
-            Let Us Know You're Coming
+            Confirm if you will be around
           </Link>
         </div>
 
