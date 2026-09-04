@@ -84,12 +84,23 @@ export default function AdminScan() {
       </header>
 
       <main className="flex-1 flex flex-col items-center justify-center p-4">
-        {loading ? (
+        <div className={`w-full max-w-md ${loading || scanResult ? 'hidden' : 'block'}`}>
+          <div className="bg-stone-800 rounded-2xl overflow-hidden p-4 shadow-2xl">
+            <div id={scannerRegionId} className="w-full rounded-xl overflow-hidden bg-black" />
+          </div>
+          <p className="text-center text-stone-400 mt-6 text-sm">
+            Point camera at the guest's QR code pass
+          </p>
+        </div>
+
+        {loading && (
           <div className="flex flex-col items-center justify-center h-64">
             <Loader2 size={48} className="animate-spin text-[#CC5500] mb-4" />
             <p className="text-stone-400">Verifying Pass...</p>
           </div>
-        ) : scanResult ? (
+        )}
+        
+        {!loading && scanResult && (
           <div className="w-full max-w-sm bg-white text-stone-900 rounded-2xl p-8 text-center shadow-2xl">
             {scanResult.status === 'VALID' && (
               <>
@@ -135,15 +146,6 @@ export default function AdminScan() {
               <RefreshCcw size={18} className="mr-2" />
               Scan Next Guest
             </button>
-          </div>
-        ) : (
-          <div className="w-full max-w-md">
-            <div className="bg-stone-800 rounded-2xl overflow-hidden p-4 shadow-2xl">
-              <div id={scannerRegionId} className="w-full rounded-xl overflow-hidden bg-black" />
-            </div>
-            <p className="text-center text-stone-400 mt-6 text-sm">
-              Point camera at the guest's QR code pass
-            </p>
           </div>
         )}
       </main>
