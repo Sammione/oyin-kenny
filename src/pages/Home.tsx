@@ -179,15 +179,15 @@ export default function Home() {
               
               <div className="flex justify-center items-center mb-4">
                 <div className="text-right pr-6 border-r-2 border-[#556B2F]/20">
-                  <div className="text-3xl font-serif text-[#556B2F] leading-none mb-1">NOV</div>
-                  <div className="text-lg text-stone-500 tracking-widest font-semibold">2026</div>
-                </div>
-                <div className="px-6">
-                  <div className="text-7xl font-serif text-[#556B2F] leading-none">14th</div>
-                </div>
-                <div className="text-left pl-6 border-l-2 border-[#556B2F]/20">
                   <div className="text-xl font-medium text-stone-700 leading-none mb-1">SATURDAY</div>
                   <div className="text-lg text-[#CC5500] font-bold">10:00 AM</div>
+                </div>
+                <div className="px-6">
+                  <div className="text-7xl font-serif text-[#556B2F] leading-none">14</div>
+                </div>
+                <div className="text-left pl-6 border-l-2 border-[#556B2F]/20">
+                  <div className="text-3xl font-serif text-[#556B2F] leading-none mb-1">NOV</div>
+                  <div className="text-lg text-stone-500 tracking-widest font-semibold">2026</div>
                 </div>
               </div>
 
