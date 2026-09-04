@@ -117,7 +117,19 @@ export async function getDashboardStats() {
       .select('*')
       .order('createdAt', { ascending: false })
 
-    if (error) throw error
+    if (error) {
+      console.error('getDashboardStats error:', error)
+      return {
+        error: error.message || 'Failed to load guest data.',
+        stats: {
+          totalRegistered: 0,
+          totalAttending: 0,
+          totalNotAttending: 0,
+          totalCheckedIn: 0,
+        },
+        guests: [],
+      }
+    }
 
     const guestList = guests || []
     const totalRegistered = guestList.length
@@ -126,6 +138,7 @@ export async function getDashboardStats() {
     const totalCheckedIn = guestList.filter(g => g.checkedIn).length
 
     return {
+      error: null,
       stats: {
         totalRegistered,
         totalAttending,
@@ -134,9 +147,10 @@ export async function getDashboardStats() {
       },
       guests: guestList,
     }
-  } catch (error) {
+  } catch (error: any) {
     console.error('Failed to get dashboard stats:', error)
     return {
+      error: error?.message || 'Unexpected error loading dashboard.',
       stats: {
         totalRegistered: 0,
         totalAttending: 0,

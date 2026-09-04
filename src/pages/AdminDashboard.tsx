@@ -7,6 +7,7 @@ import ExportCsvButton from '../components/ExportCsvButton'
 export default function AdminDashboard() {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
+  const [fetchError, setFetchError] = useState<string | null>(null)
   const [data, setData] = useState<{
     stats: {
       totalRegistered: number
@@ -22,8 +23,13 @@ export default function AdminDashboard() {
 
   const loadStats = async () => {
     setLoading(true)
+    setFetchError(null)
     const res = await getDashboardStats()
-    setData(res)
+    if (res.error) {
+      setFetchError(res.error)
+    } else {
+      setData(res)
+    }
     setLoading(false)
   }
 
@@ -73,6 +79,17 @@ export default function AdminDashboard() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8">
+        {/* Error Banner */}
+        {fetchError && (
+          <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl p-5 mb-6 flex flex-col gap-2">
+            <p className="font-bold">⚠️ Could not load guest data</p>
+            <p className="text-sm font-mono">{fetchError}</p>
+            <p className="text-sm text-red-500 mt-1">
+              This is usually a <strong>Row Level Security (RLS)</strong> issue. Please run the SQL fix in your{' '}
+              <a href="https://supabase.com/dashboard/project/wwimzywqkeiadgymhidq/sql" target="_blank" rel="noreferrer" className="underline font-semibold">Supabase SQL Editor</a>.
+            </p>
+          </div>
+        )}
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm">
