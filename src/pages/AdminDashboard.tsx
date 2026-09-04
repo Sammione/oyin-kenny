@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Users, CheckCircle, XCircle, QrCode, ScanLine, LogOut, Loader2, RefreshCw } from 'lucide-react'
 import { getDashboardStats } from '../lib/actions'
-
-
+import ExportCsvButton from '../components/ExportCsvButton'
 export default function AdminDashboard() {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
@@ -61,7 +60,7 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-stone-50 font-sans text-stone-800">
       <header className="bg-white border-b border-stone-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <h1 className="text-xl font-serif font-bold text-[#37461E]">Wedding Admin</h1>
+          <h1 className="text-xl font-serif font-bold text-[#37461E]">Oyinkansife & Kehinde - Admin</h1>
           <div className="flex items-center gap-4">
             <button 
               onClick={loadStats}
@@ -137,9 +136,9 @@ export default function AdminDashboard() {
 
         {/* Guest Table */}
         <div className="bg-white rounded-xl border border-stone-200 shadow-sm overflow-hidden">
-          <div className="p-6 border-b border-stone-200 flex justify-between items-center">
+          <div className="p-6 border-b border-stone-200 flex justify-between items-center flex-wrap gap-4">
             <h2 className="text-xl font-bold text-stone-800">Guest List</h2>
-
+            <ExportCsvButton guests={data.guests} />
           </div>
           
           <div className="overflow-x-auto">

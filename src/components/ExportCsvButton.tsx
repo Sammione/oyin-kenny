@@ -18,7 +18,7 @@ export default function ExportCsvButton({ guests }: { guests: any[] }) {
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
-    link.setAttribute('download', 'wedding_guest_list.csv')
+    link.setAttribute('download', 'Oyinkansife_Kehinde_Guest_List.csv')
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -27,7 +27,7 @@ export default function ExportCsvButton({ guests }: { guests: any[] }) {
   return (
     <button 
       onClick={downloadCSV}
-      className="inline-flex items-center text-sm bg-stone-100 hover:bg-stone-200 text-stone-700 px-4 py-2 rounded-lg transition-colors border border-stone-200 font-medium cursor-pointer"
+      className="inline-flex items-center text-sm bg-[#556B2F] hover:bg-[#37461E] text-white px-4 py-2 rounded-lg transition-colors border border-transparent font-medium cursor-pointer shadow-sm"
     >
       <Download size={16} className="mr-2" />
       Export as CSV
