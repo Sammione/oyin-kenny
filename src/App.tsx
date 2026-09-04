@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import RSVP from './pages/RSVP'
 import RSVPSuccess from './pages/RSVPSuccess'
@@ -26,6 +26,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/rsvp" element={<RSVP />} />
           <Route path="/rsvp/success" element={<RSVPSuccess />} />
+          <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/scan" element={<AdminScan />} />
