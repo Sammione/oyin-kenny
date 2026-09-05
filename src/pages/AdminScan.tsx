@@ -21,7 +21,12 @@ export default function AdminScan() {
     if (!scannerRef.current) {
       const scanner = new Html5QrcodeScanner(
         scannerRegionId,
-        { fps: 10, qrbox: { width: 250, height: 250 }, aspectRatio: 1.0 },
+        {
+          fps: 10,
+          qrbox: { width: 250, height: 250 },
+          aspectRatio: 1.0,
+          videoConstraints: { facingMode: { exact: 'environment' } }
+        },
         false
       )
       
@@ -107,7 +112,8 @@ export default function AdminScan() {
                 <div className="mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">
                   <CheckCircle2 size={40} className="text-green-600" />
                 </div>
-                <h2 className="text-2xl font-bold text-green-700 mb-1">APPROVED</h2>
+                <h2 className="text-3xl font-bold text-green-700 mb-1">E káàbọ̀! 🎉</h2>
+                <p className="text-lg font-semibold text-green-600 mb-2">E káàbọ̀ sí ìgbéyàwó wa!</p>
                 <h3 className="text-xl font-medium mb-4">{scanResult.guest}</h3>
                 <p className="text-stone-500 mb-8">{scanResult.message}</p>
               </>

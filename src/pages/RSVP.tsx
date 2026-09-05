@@ -87,7 +87,7 @@ export default function RSVPPage() {
                   id="phone"
                   name="phone"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:ring-2 focus:ring-[#CC5500] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:ring-2 focus:ring-[#CC5500] focus:border-transparent outline-none transition-all text-[#CC5500]"
                   placeholder="e.g. 08012345678"
                 />
                 <p className="text-xs text-stone-500 mt-2">We'll use this to find your reservation if you come back.</p>
